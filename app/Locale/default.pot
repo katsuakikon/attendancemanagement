@@ -1,0 +1,387 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-03-10 05:46+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/UsersController.php:22;42;62
+msgid "Invalid user"
+msgstr ""
+
+#: Controller/UsersController.php:31;46
+msgid "The user has been saved"
+msgstr ""
+
+#: Controller/UsersController.php:34;49
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:65
+msgid "User deleted"
+msgstr ""
+
+#: Controller/UsersController.php:68
+msgid "User was not deleted"
+msgstr ""
+
+#: Controller/UsersController.php:77
+msgid "Invalid username or password, try again"
+msgstr ""
+
+#: View/QBases/add.ctp:4
+msgid "Add Q Base"
+msgstr ""
+
+#: View/QBases/add.ctp:14
+#: View/QBases/edit.ctp:15
+#: View/QCategories/add.ctp:11
+#: View/QCategories/edit.ctp:12
+#: View/QClasses/add.ctp:12
+#: View/QClasses/edit.ctp:13
+#: View/QDetails/add.ctp:11
+#: View/QDetails/edit.ctp:12
+msgid "Submit"
+msgstr ""
+
+#: View/QBases/add.ctp:17
+#: View/QBases/edit.ctp:18
+#: View/QBases/index.ctp:13;50
+#: View/QBases/view.ctp:42
+#: View/QCategories/add.ctp:14
+#: View/QCategories/edit.ctp:15
+#: View/QCategories/index.ctp:10;44
+#: View/QCategories/view.ctp:27
+#: View/QClasses/add.ctp:15
+#: View/QClasses/edit.ctp:16
+#: View/QClasses/index.ctp:11;46
+#: View/QClasses/view.ctp:32
+#: View/QDetails/add.ctp:14
+#: View/QDetails/edit.ctp:15
+#: View/QDetails/index.ctp:10;44
+#: View/QDetails/view.ctp:27
+#: View/Question/index.ctp:16
+msgid "Actions"
+msgstr ""
+
+#: View/QBases/add.ctp:20
+#: View/QBases/edit.ctp:22
+#: View/QBases/view.ctp:46
+msgid "List Q Bases"
+msgstr ""
+
+#: View/QBases/edit.ctp:4
+#: View/QBases/view.ctp:44
+msgid "Edit Q Base"
+msgstr ""
+
+#: View/QBases/edit.ctp:21
+#: View/QBases/index.ctp:29
+#: View/QCategories/edit.ctp:18
+#: View/QCategories/index.ctp:23
+#: View/QClasses/edit.ctp:19
+#: View/QClasses/index.ctp:25
+#: View/QDetails/edit.ctp:18
+#: View/QDetails/index.ctp:23
+msgid "Delete"
+msgstr ""
+
+#: View/QBases/edit.ctp:21
+#: View/QBases/index.ctp:29
+#: View/QBases/view.ctp:45
+#: View/QCategories/edit.ctp:18
+#: View/QCategories/index.ctp:23
+#: View/QCategories/view.ctp:30
+#: View/QClasses/edit.ctp:19
+#: View/QClasses/index.ctp:25
+#: View/QClasses/view.ctp:35
+#: View/QDetails/edit.ctp:18
+#: View/QDetails/index.ctp:23
+#: View/QDetails/view.ctp:30
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/QBases/index.ctp:2
+msgid "Q Bases"
+msgstr ""
+
+#: View/QBases/index.ctp:27
+#: View/QCategories/index.ctp:21
+#: View/QClasses/index.ctp:23
+#: View/QDetails/index.ctp:21
+msgid "View"
+msgstr ""
+
+#: View/QBases/index.ctp:28
+#: View/QCategories/index.ctp:22
+#: View/QClasses/index.ctp:24
+#: View/QDetails/index.ctp:22
+msgid "Edit"
+msgstr ""
+
+#: View/QBases/index.ctp:38
+#: View/QCategories/index.ctp:32
+#: View/QClasses/index.ctp:34
+#: View/QDetails/index.ctp:32
+#: View/Question/index.ctp:37
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: View/QBases/index.ctp:43
+#: View/QCategories/index.ctp:37
+#: View/QClasses/index.ctp:39
+#: View/QDetails/index.ctp:37
+#: View/Question/index.ctp:42
+msgid "previous"
+msgstr ""
+
+#: View/QBases/index.ctp:45
+#: View/QCategories/index.ctp:39
+#: View/QClasses/index.ctp:41
+#: View/QDetails/index.ctp:39
+#: View/Question/index.ctp:44
+msgid "next"
+msgstr ""
+
+#: View/QBases/index.ctp:52
+#: View/QBases/view.ctp:47
+msgid "New Q Base"
+msgstr ""
+
+#: View/QBases/view.ctp:2
+msgid "Q Base"
+msgstr ""
+
+#: View/QBases/view.ctp:4
+#: View/QCategories/view.ctp:4
+#: View/QClasses/view.ctp:4
+#: View/QDetails/view.ctp:4
+msgid "Id"
+msgstr ""
+
+#: View/QBases/view.ctp:9
+msgid "Category"
+msgstr ""
+
+#: View/QBases/view.ctp:14
+msgid "Type"
+msgstr ""
+
+#: View/QBases/view.ctp:19
+msgid "Hint"
+msgstr ""
+
+#: View/QBases/view.ctp:24
+#: View/QCategories/view.ctp:19
+#: View/QClasses/view.ctp:14
+msgid "Description"
+msgstr ""
+
+#: View/QBases/view.ctp:29
+#: View/QDetails/view.ctp:14
+msgid "Question"
+msgstr ""
+
+#: View/QBases/view.ctp:34
+#: View/QCategories/view.ctp:9
+msgid "Class Id"
+msgstr ""
+
+#: View/QBases/view.ctp:45
+msgid "Delete Q Base"
+msgstr ""
+
+#: View/QCategories/add.ctp:4
+msgid "Add Q Category"
+msgstr ""
+
+#: View/QCategories/add.ctp:17
+#: View/QCategories/edit.ctp:19
+#: View/QCategories/view.ctp:31
+msgid "List Q Categories"
+msgstr ""
+
+#: View/QCategories/edit.ctp:4
+#: View/QCategories/view.ctp:29
+msgid "Edit Q Category"
+msgstr ""
+
+#: View/QCategories/index.ctp:2
+msgid "Q Categories"
+msgstr ""
+
+#: View/QCategories/index.ctp:46
+#: View/QCategories/view.ctp:32
+msgid "New Q Category"
+msgstr ""
+
+#: View/QCategories/view.ctp:2
+msgid "Q Category"
+msgstr ""
+
+#: View/QCategories/view.ctp:14
+#: View/QClasses/view.ctp:9
+msgid "Name"
+msgstr ""
+
+#: View/QCategories/view.ctp:30
+msgid "Delete Q Category"
+msgstr ""
+
+#: View/QClasses/add.ctp:4
+msgid "Add Q Class"
+msgstr ""
+
+#: View/QClasses/add.ctp:18
+#: View/QClasses/edit.ctp:20
+#: View/QClasses/view.ctp:36
+msgid "List Q Classes"
+msgstr ""
+
+#: View/QClasses/edit.ctp:4
+#: View/QClasses/view.ctp:34
+msgid "Edit Q Class"
+msgstr ""
+
+#: View/QClasses/index.ctp:2
+msgid "Q Classes"
+msgstr ""
+
+#: View/QClasses/index.ctp:48
+#: View/QClasses/view.ctp:37
+msgid "New Q Class"
+msgstr ""
+
+#: View/QClasses/view.ctp:2
+msgid "Q Class"
+msgstr ""
+
+#: View/QClasses/view.ctp:19
+msgid "Test Time"
+msgstr ""
+
+#: View/QClasses/view.ctp:24
+msgid "Test Total Count"
+msgstr ""
+
+#: View/QClasses/view.ctp:35
+msgid "Delete Q Class"
+msgstr ""
+
+#: View/QDetails/add.ctp:4
+msgid "Add Q Detail"
+msgstr ""
+
+#: View/QDetails/add.ctp:17
+#: View/QDetails/edit.ctp:19
+#: View/QDetails/view.ctp:31
+msgid "List Q Details"
+msgstr ""
+
+#: View/QDetails/edit.ctp:4
+#: View/QDetails/view.ctp:29
+msgid "Edit Q Detail"
+msgstr ""
+
+#: View/QDetails/index.ctp:2
+msgid "Q Details"
+msgstr ""
+
+#: View/QDetails/index.ctp:46
+#: View/QDetails/view.ctp:32
+msgid "New Q Detail"
+msgstr ""
+
+#: View/QDetails/view.ctp:2
+msgid "Q Detail"
+msgstr ""
+
+#: View/QDetails/view.ctp:9
+msgid "Parent Id"
+msgstr ""
+
+#: View/QDetails/view.ctp:19
+msgid "Answer"
+msgstr ""
+
+#: View/QDetails/view.ctp:30
+msgid "Delete Q Detail"
+msgstr ""
+
+#: View/Question/index.ctp:13
+msgid "概要"
+msgstr ""
+
+#: View/Question/index.ctp:14
+msgid "試験時間"
+msgstr ""
+
+#: View/Question/index.ctp:15
+msgid "問題数（約）"
+msgstr ""
+
+#: View/Question/index.ctp:28
+msgid "開始"
+msgstr ""
+
+#: Model/QBase.php:validation for field category;validation for field type;validation for field class_id
+#: Model/QCategory.php:validation for field class_id;validation for field name
+#: Model/QClass.php:validation for field name;validation for field test_time;validation for field test_total_count
+#: Model/QDetail.php:validation for field parent_id;validation for field answer
+msgid "notEmpty"
+msgstr ""
+
+#: Model/QBase.php:validation for field type;validation for field class_id
+#: Model/QCategory.php:validation for field class_id
+#: Model/QClass.php:validation for field test_time;validation for field test_total_count
+#: Model/QDetail.php:validation for field parent_id;validation for field answer
+msgid "numeric"
+msgstr ""
+
+#: Model/User.php:validation for field username
+msgid "A username is required"
+msgstr ""
+
+#: Model/User.php:validation for field password
+msgid "A password is required"
+msgstr ""
+
+#: Model/User.php:validation for field role
+msgid "Please enter a valid role"
+msgstr ""
+
+#: View/Errors/error400.ctp:19
+#: View/Errors/error500.ctp:19
+msgid "Error"
+msgstr ""
+
+#: View/Errors/error400.ctp:21
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: View/Errors/error500.ctp:20
+msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: View/Layouts/default.ctp:17
+#: View/Layouts/error.ctp:17
+msgid "CakePHP: the rapid development php framework"
+msgstr ""
+
+#: View/Layouts/default.ctp:18
+msgid "CakePHP %s"
+msgstr ""
+
+#: webroot/test.php:93
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+
