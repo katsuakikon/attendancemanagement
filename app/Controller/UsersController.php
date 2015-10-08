@@ -3,78 +3,110 @@ App::uses('AppController', 'Controller');
 /**
  * Users Controller
  *
+ * @property User $User
+ * @property PaginatorComponent $Paginator
+ * @property SessionComponent $Session
  */
 class UsersController extends AppController {
 
-	public function beforeFilter() {
-		parent::beforeFilter();
-		$this->Auth->allow('add', 'logout');
-	}
+/**
+ * Components
+ *
+ * @var array
+ */
+	public $components = array('Paginator', 'Session');
 
+/**
+ * index method
+ *
+ * @return void
+ */
 	public function index() {
 		$this->User->recursive = 0;
-		$this->set('users', $this->paginate());
+		$this->set('users', $this->Paginator->paginate());
 	}
 
+/**
+ * view method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
 	public function view($id = null) {
-		$this->User->id = $id;
-		if (!$this->User->exists()) {
+		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid user'));
 		}
-		$this->set('user', $this->User->read(null, $id));
+		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+		$this->set('user', $this->User->find('first', $options));
 	}
 
+/**
+ * add method
+ *
+ * @return void
+ */
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->User->create();
-
-			// 初期ユーザ構築用
-			// $this->User->set(array(
-			// 	'created_id' => 1,
-			// 	'modified_id' => 1,
-			// 	'start_date' => '2015-03-11 09:07:37'
-			// 	));
+			$this->request->data['User']['created_id'] = $this->Auth->user('id');
+			$this->request->data['User']['modified_id'] = $this->Auth->user('id');
 
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('The user has been saved.'));
+				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}
 		}
 	}
 
+/**
+ * edit method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
 	public function edit($id = null) {
-		$this->User->id = $id;
-		if (!$this->User->exists()) {
+		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid user'));
 		}
-		if ($this->request->is('post') || $this->request->is('put')) {
+		if ($this->request->is(array('post', 'put'))) {
+			$this->request->data['User']['created_id'] = $this->Auth->user('id');
+			$this->request->data['User']['modified_id'] = $this->Auth->user('id');
+			
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('The user has been saved.'));
+				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}
 		} else {
-			$this->request->data = $this->User->read(null, $id);
-			unset($this->request->data['User']['password']);
+			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+			$this->request->data = $this->User->find('first', $options);
 		}
 	}
 
+/**
+ * delete method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
 	public function delete($id = null) {
-		$this->request->onlyAllow('post');
-
 		$this->User->id = $id;
 		if (!$this->User->exists()) {
 			throw new NotFoundException(__('Invalid user'));
 		}
+		$this->request->allowMethod('post', 'delete');
 		if ($this->User->delete()) {
-			$this->Session->setFlash(__('User deleted'));
-			$this->redirect(array('action' => 'index'));
+			$this->Session->setFlash(__('The user has been deleted.'));
+		} else {
+			$this->Session->setFlash(__('The user could not be deleted. Please, try again.'));
 		}
-		$this->Session->setFlash(__('User was not deleted'));
-		$this->redirect(array('action' => 'index'));
+		return $this->redirect(array('action' => 'index'));
 	}
 
 	public function login() {

@@ -20,8 +20,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
-	<?php echo $this->Html->script('lib/jquery-1.11.0.min'); ?>
+	<meta charset="utf-8">
+    <title><?php echo $titleForLayout; ?></title>
+
+	<!-- <?php echo $this->Html->css('bootstrap.min'); ?> -->
+
+	<?php echo $this->Html->script('lib/jquery-2.1.3.min'); ?>
     <?php echo $this->Html->script('lib/jquery.cookie'); ?>
     <?php echo $this->Html->script('cookie_config'); ?>
     
@@ -35,6 +39,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('hs');
+		echo $this->Html->css('custom');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -44,10 +49,26 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<h1>Web Test Simurator</h1>
+			<h1>Sola Attendance Manager</h1>
+			<div>
+		<ul>
+			<li>
+				<?php echo $this->Html->link(__('トップ'), '/'); ?>
+			</li>
+			<li>
+				<?php echo $this->Html->link(__('勤怠設定'), '/AttendanceConfigs'); ?>
+			</li>
+			<li>
+				<?php echo $this->Html->link(__('管理者ポータル'), '/Pages/admin'); ?>
+			</li>
+			<li>
+				<?php echo $this->Html->link(__('パスワード変更'), '/users/editPassword'); ?>
+			</li>
+		</ul>
+	</div>
 			<div style="width:100%">
 			<?php echo $this->Html->link('ログアウト', '/Users/logout', array('class' => 'pull-right')); ?>
-		</div>
+			</div>
 		</div>
 		<div id="content">
 			<?php echo $this->Session->flash(); ?>

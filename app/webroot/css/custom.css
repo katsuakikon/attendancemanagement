@@ -1,0 +1,117 @@
+.in-set {
+	float: left;
+	clear: none;
+	width: 20%;
+}
+
+.in-set div {
+	clear: none;
+}
+
+.holiday_line {
+	background-color: #888888;
+}
+
+.search {
+	float: right;
+	width: 50%;
+}
+
+.search fieldset {
+	float: left;
+	padding: 0 0;
+	margin-bottom: 0;
+	width: 80%;
+}
+
+.search legend {
+	clear: none;
+	float: left;
+	width: 20%;
+}
+
+.search .out-set {
+	clear: none;
+	float: right;
+	width: 80%;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.search .in-set {
+	width: 35%;
+	padding: 0 0;
+	margin-bottom: 0;
+	float: left;
+	clear: none;
+}
+
+.search .in-set-s {
+	width: 15%;
+	padding: 0 0;
+	margin-bottom: 0;
+	float: left;
+	clear: none;
+}
+
+.search .submit {
+	width: 15%;
+	padding: 0 0;
+	margin-bottom: 0;
+	float: left;
+	clear: none;
+}
+
+/*.search .in-set select {
+	float: left;
+	clear: none;
+	width: 50%;
+}
+
+.search .in-set label {
+	float: left;
+	clear: none;
+	width: 50%;
+}*/
+
+/*input.form-submit {
+	background: -moz-linear-gradient(top,#BFD9E5, #63B0CF 50%,#0080B3 50%,#09C);
+	background: -webkit-gradient(linear, left top, left bottom, from(#BFD9E5), color-stop(0.5,#63B0CF), color-stop(0.5,#0080B3), to(#09C));
+	border: 1px solid #DDD;
+	color: #FFF;
+	width: 60px;
+	padding: 0 0;
+	font-size: 1em;
+}*/
+
+input[type=submit] {
+	display: inline;
+	font-size: 80%;
+	width: auto;
+}
+form .submit input[type=submit] {
+	background:#62af56;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#76BF6B), to(#3B8230));
+	background-image: -webkit-linear-gradient(top, #76BF6B, #3B8230);
+	background-image: -moz-linear-gradient(top, #76BF6B, #3B8230);
+	border-color: #2d6324;
+	color: #fff;
+	text-shadow: rgba(0, 0, 0, 0.5) 0px -1px 0px;
+	padding: 2px 5px;
+}
+form .submit input[type=submit]:hover {
+	background: #5BA150;
+}
+
+form div {
+	clear: both;
+	margin-bottom: 0;
+	padding: 0;
+	vertical-align: text-top;
+}
+
+form div.submit {
+	border: 0;
+	clear: both;
+	margin-top: 0;
+}

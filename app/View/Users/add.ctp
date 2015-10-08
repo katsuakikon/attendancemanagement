@@ -1,28 +1,23 @@
-<div class="container">
-	<h1>アカウント登録</h1>
-	<?php echo $this->Form->create('User'); ?>
-	<table class="table table-bordered table-striped">
-		<tbody>
-			<tr>
-				<th>ログインID</th>
-				<td>
-					<?php echo $this->Form->input('username', array('class' => 'form-control', 'label' => false, 'div' => false, 'error' => false, 'required' => false )); ?>
-				</td>
-			</tr>
-			<tr>
-				<th>パスワード</th>
-				<td>
-					<?php echo $this->Form->input('password', array('class' => 'form-control', 'label' => false, 'div' => false, 'error' => false, 'required' => false )); ?>
-				</td>
-			</tr>
-			<tr>
-				<th>権限</th>
-				<td>
-					<?php echo $this->Form->input('role', array('options' => array('admin' => '管理者', 'user' => 'ユーザー'), 'class' => 'form-control', 'label' => false, 'div' => false, 'error' => false, 'required' => false )); ?>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<button type="submit" class="btn btn-primary btn-lg btn-block">登録する</button>
-</form>
+<div class="users form">
+<?php echo $this->Form->create('User'); ?>
+	<fieldset>
+		<legend><?php echo __('Add User'); ?></legend>
+	<?php
+		echo $this->Form->input('username', array('label' => 'アカウントID'));
+		echo $this->Form->input('password', array('label' => 'パスワード'));
+		echo $this->Form->input('no', array('label' => '社員番号'));
+		echo $this->Form->input('family_name', array('label' => '姓'));
+		echo $this->Form->input('first_name', array('label' => '名'));
+		echo $this->Form->input('role', array('options' => array('admin' => '管理者', 'user' => 'ユーザー')));
+		echo $this->Form->input('start_date');
+	?>
+	</fieldset>
+<?php echo $this->Form->end(__('Submit')); ?>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
+	</ul>
 </div>
